@@ -1,0 +1,240 @@
+Aqui está uma **lista definitiva**, simples e direta, com os **comandos mais úteis para trabalhar em dupla**, cada um em um computador, mantendo o projeto sincronizado sem conflito.
+
+Organizei por temas para facilitar 👇
+
+---
+
+# 🚀 **1. Clonar o projeto (primeiro passo)**
+
+```bash
+git clone git@github.com:usuario/repositorio.git
+```
+
+*(Se estiver usando HTTPS, basta trocar pela URL HTTPS.)*
+
+---
+
+# 🔄 **2. Atualizar o projeto pra última versão**
+
+Antes de começar a programar:
+
+```bash
+git pull
+```
+
+Se quiser ver a branch:
+
+```bash
+git pull origin main
+```
+
+---
+
+# 🌿 **3. Criar e trocar de branch**
+
+Para criar uma nova branch (ex: funcionalidade nova):
+
+```bash
+git checkout -b nome-da-branch
+```
+
+Voltar para main:
+
+```bash
+git checkout main
+```
+
+---
+
+# 📌 **4. Listar branches**
+
+```bash
+git branch        # locais
+git branch -a     # locais + remotas
+git branch -r     # remotas
+```
+
+---
+
+# 📁 **5. Ver status do que mudou**
+
+```bash
+git status
+```
+
+---
+
+# 📝 **6. Adicionar arquivos**
+
+Adicionar tudo:
+
+```bash
+git add .
+```
+
+Adicionar só 1 arquivo:
+
+```bash
+git add nome.txt
+```
+
+---
+
+# 💬 **7. Commit**
+
+```bash
+git commit -m "mensagem clara do que foi feito"
+```
+
+---
+
+# 📤 **8. Enviar alterações para o GitHub**
+
+Sempre envie para a branch em que está trabalhando:
+
+```bash
+git push origin nome-da-branch
+```
+
+---
+
+# 🔄 **9. Atualizar sua branch com main (antes de dar merge)**
+
+Se estiver numa branch e quer trazê-la atualizada:
+
+```bash
+git pull origin main
+```
+
+Ou:
+
+```bash
+git merge main
+```
+
+---
+
+# 🧩 **10. Resolver conflitos**
+
+Ver o que está em conflito:
+
+```bash
+git status
+```
+
+Depois de arrumar os arquivos:
+
+```bash
+git add .
+git commit
+```
+
+---
+
+# 🔍 **11. Ver histórico**
+
+```bash
+git log --oneline --graph --decorate
+```
+
+---
+
+# ✨ **12. Stash (guardar mudanças sem commitar)**
+
+Guardar:
+
+```bash
+git stash
+```
+
+Listar stashes:
+
+```bash
+git stash list
+```
+
+Aplicar:
+
+```bash
+git stash apply
+```
+
+---
+
+# 🚮 **13. Apagar branch**
+
+Local:
+
+```bash
+git branch -d nome-da-branch
+```
+
+Remota:
+
+```bash
+git push origin --delete nome-da-branch
+```
+
+---
+
+# 🔧 **14. Ver diferenças (o que foi alterado)**
+
+Entre seu código e o commit anterior:
+
+```bash
+git diff
+```
+
+---
+
+# 📦 **15. Configurações importantes**
+
+Configurar nome:
+
+```bash
+git config --global user.name "Seu Nome"
+```
+
+Configurar email:
+
+```bash
+git config --global user.email "seu-email@exemplo.com"
+```
+
+---
+
+# 🛠️ **Workflow ideal para trabalhar em dupla**
+
+### **1. Cada pessoa cria sua branch**
+
+* `feature-login`
+* `feature-interface`
+* `feature-api`
+
+### **2. Antes de começar a programar:**
+
+```bash
+git pull origin main
+```
+
+### **3. Desenvolve normalmente e commita:**
+
+```bash
+git add .
+git commit -m "Descrição"
+```
+
+### **4. Faz push da sua branch:**
+
+```bash
+git push origin feature-login
+```
+
+### **5. Abre um Pull Request no GitHub**
+
+### **6. A branch só é mergeada quando ambos aprovarem**
+
+---
+
+Se quiser, posso montar um **Guia rápido em PDF**, um **fluxo ideal de branches** (Git Flow), ou **configurar seu projeto para trabalho em equipe**.
+
